@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Mail Sending Application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+  #contact {
+    background: linear-gradient(#e66465, #9198e5);
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 700px;
+    /*border-radius: 60px;*/
+  }
+  h1,p {
+  color: white;
+  }
+  .form-control {
+    border-radius: 60px;
+}
+.btn {
+    border-radius: 60px;
+}
+</style>
+<body>
+<div id="contact" class="bg-5 container-fluid text-center">
+<form id="contact-form" method="post" action="mail.php" role="form">
+  
+    <div class="messages"><h1>Simple Mail Sending Application</h1></div><br>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Enter Your Firstname" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Enter Your Lastname" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Enter Your Email" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input id="form_email" type="mainemail" name="mainemail" class="form-control" placeholder="Enter Receiver Email" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div><br><br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message Topic" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div><br>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+                <br><br><center><p>Message Send From Website Email Address With Your Email As Reference</p></center>
+                <br>
+            </div>
+        </div>
+    </div>
+
+</form>
+</div>
+</body>
+</html>
