@@ -1,2 +1,2 @@
 # Simple-Mail-Sending-Application
-Sending mail with localhost
+A Web Application fo sending mail with localhost
